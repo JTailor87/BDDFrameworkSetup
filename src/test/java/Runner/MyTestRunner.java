@@ -1,4 +1,29 @@
 package Runner;
 
-public class MyTestRunner {
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.DataProvider;
+
+@CucumberOptions(
+        features = "src/test/resources/features",
+        glue = {"stepdefinitions", "AppHooks"},
+        plugin = {
+                "pretty",
+                "html:target/cucumber-reports.html",
+                "json:target/cucumber.json",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+                "timeline:target/test-output-thread/"
+        },
+        monochrome = true,
+        publish = true,
+        dryRun = false, /*true = to check the mapping of steps*/
+        tags = "@Cart"
+)
+public class MyTestRunner extends AbstractTestNGCucumberTests {
+    @Override
+    @DataProvider(parallel = false)
+    public Object[][] scenarios(){
+        return super.scenarios();
+    }
 }
