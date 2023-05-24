@@ -6,8 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = "src/test/resources/features",
-        glue = {"stepdefinitions", "AppHooks"},
+        features = "src/test/resources/Features",
+        glue = {"StepDefinitions", "AppHooks"},
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports.html",
@@ -18,7 +18,7 @@ import org.testng.annotations.DataProvider;
         monochrome = true,
         publish = true,
         dryRun = false, /*true = to check the mapping of steps*/
-        tags = "@Cart"
+        tags = "@test_1"
 )
 public class MyTestRunner extends AbstractTestNGCucumberTests {
     @Override

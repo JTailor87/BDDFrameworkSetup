@@ -22,13 +22,13 @@ public class DriverFactory {
 
         System.out.println("browser value is: " + browser);
 
-        if (browser.equals("chrome")) {
+        if (browser.equals("Chrome")) {
             WebDriverManager.chromedriver().setup();
             tlDriver.set(new ChromeDriver());
-        } else if (browser.equals("firefox")) {
+        } else if (browser.equals("Firefox")) {
             WebDriverManager.firefoxdriver().setup();
             tlDriver.set(new FirefoxDriver());
-        } else if (browser.equals("safari")) {
+        } else if (browser.equals("Safari")) {
             tlDriver.set(new SafariDriver());
         } else {
             System.out.println("Please pass the correct browser value: " + browser);
