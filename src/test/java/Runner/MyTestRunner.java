@@ -18,7 +18,7 @@ import org.testng.annotations.DataProvider;
         monochrome = true,
         publish = true,
         dryRun = false, /*true = to check the mapping of steps*/
-        tags = "@test_2"
+        tags = "@test_1"
 )
 public class MyTestRunner extends AbstractTestNGCucumberTests {
     @Override
