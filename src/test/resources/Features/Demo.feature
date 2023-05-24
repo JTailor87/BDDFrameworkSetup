@@ -9,3 +9,14 @@ Feature: This is a demo feature file
     And User click the search button
     And User click the selenium link
     Then User validate page title is "Selenium"
+
+  @test_2
+  Scenario Outline: Google search for multiple items
+    Given User opens a URL "https://www.google.co.za"
+    When User enter text "<searchText>" in search window
+    And User click the search button
+    Examples:
+      | searchText |
+      | Apple      |
+      | Banana     |
+      | Orange     |

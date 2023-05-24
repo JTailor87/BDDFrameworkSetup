@@ -20,8 +20,12 @@ public class DemoSteps {
     public void user_enter_in_search_window(String text) {
         demoPage.enterSearchText(text);
     }
+    @When("User enter text {string} in search window")
+    public void user_enter_text_in_search_window(String text) {
+        demoPage.enterSearchText(text);
+    }
     @When("User click the search button")
-    public void user_click_the_search_button() {
+    public void user_click_the_search_button() throws InterruptedException {
         demoPage.clickSearch();
     }
     @When("User click the selenium link")

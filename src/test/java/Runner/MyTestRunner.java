@@ -18,11 +18,11 @@ import org.testng.annotations.DataProvider;
         monochrome = true,
         publish = true,
         dryRun = false, /*true = to check the mapping of steps*/
-        tags = "@test_1"
+        tags = "@test_2"
 )
 public class MyTestRunner extends AbstractTestNGCucumberTests {
     @Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios(){
         return super.scenarios();
     }

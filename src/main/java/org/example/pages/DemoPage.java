@@ -20,9 +20,10 @@ public class DemoPage {
     public void enterSearchText(String Text){
         driver.findElement(SearchBox).sendKeys(Text);
     }
-    public void clickSearch(){
+    public void clickSearch() throws InterruptedException {
         w = new WebDriverWait(driver, Duration.ofSeconds(20));
         w.until(ExpectedConditions.elementToBeClickable(Search)).click();
+        Thread.sleep(3000);
     }
     public void clickSelenium(){
         w = new WebDriverWait(driver, Duration.ofSeconds(20));
