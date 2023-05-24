@@ -5,3 +5,7 @@ Feature: This is a demo feature file
   @test_1
   Scenario: Demo1
     Given User opens a URL "https://www.google.co.za"
+    When User enter "Selemium hq" in search window
+    And User click the search button
+    And User click the selenium link
+    Then User validate page title is "selenium"
