@@ -36,4 +36,12 @@ public class DemoSteps {
     public void user_validate_page_title_is(String Title) {
         Assert.assertEquals(Title, demoPage.validatePageTitle(), "Page titles are not same");
     }
+    @When("User click on {string} wikipedia link")
+    public void user_click_on_wikipedia_link(String fruit) {
+        demoPage.clickOnFruitWikipediaLink(fruit);
+    }
+    @Then("User validate the {string}")
+    public void user_validate_the(String Title) {
+        Assert.assertEquals(Title, demoPage.validateTheWikipediaPageTitle(), "Page titles are not same");
+    }
 }

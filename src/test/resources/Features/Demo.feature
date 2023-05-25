@@ -15,8 +15,10 @@ Feature: This is a demo feature file
     Given User opens a URL "https://www.google.co.za"
     When User enter text "<searchText>" in search window
     And User click the search button
+    And User click on "<searchText>" wikipedia link
+    Then User validate the "<pageTitle>"
     Examples:
-      | searchText |
-      | Apple      |
-      | Banana     |
-      | Orange     |
+      | searchText   | pageTitle          |
+      | Apple Fruit  | Apple - Wikipedia  |
+      | Banana Fruit | Banana - Wikipedia |
+      | Orange Fruit | Orange - Wikipedia |
